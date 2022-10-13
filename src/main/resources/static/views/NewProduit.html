@@ -1,0 +1,48 @@
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="../css/myStyle.css"/>
+</head>
+<div class="container spacer">
+  <div class="panel panel-default" ng-if="mode==0">
+   <div class="panel-heading">Saisie d'un produit </div>
+   <div class="panel-body">
+     <form>
+       <div class="form-group">
+       <label class="control-label">Description</label>
+       <input class="form-control" type="text" ng-model="produit.description">
+       </div>
+       <div class="form-group">
+       <label class="control-label">CodeEAN13</label>
+       <input class="form-control" type="text" ng-model="produit.codeEan13">
+       </div>
+       <div class="form-group">
+       <label class="control-label">Product Name</label>
+       <input class="form-control" type="text" ng-model="produit.productName">
+       </div>
+       <div>
+         <button ng-click="saveProduit()" class="btn btn-primary">Save</button>
+       </div>
+     </form>
+   </div>
+   </div>
+   
+   <div class="panel panel-default"  ng-if="mode==1">
+      <div class="panel-heading">Confirmation: <a href="#" ng-click="modeForm()">New</a></div>
+          <div class="panel-body">
+               <div class="form-group">
+                <label>ID:</label><label>{{produit.id}}</label>
+               </div>
+               <div class="form-group">
+                <label>Déscription:</label><label>{{produit.description}}</label>
+               </div>
+               <div class="form-group">
+                <label>Code EAN13 :</label><label>{{produit.codeEan13}}</label>
+               </div>
+               <div class="form-group">
+                <label>Product Name:</label><label>{{produit.productName}}</label>
+               </div>
+          </div>
+       </div>  
+</div>
+
